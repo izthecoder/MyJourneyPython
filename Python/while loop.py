@@ -15,7 +15,7 @@ while guess_count < guess_max:
         print("Correct!!!")
         break
 else:
-    print("You lose.. .Bitchhh")
+    print("You lose.. .")
 
 #guessing game 2 (concept)
 import random

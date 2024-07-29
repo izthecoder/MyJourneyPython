@@ -1,0 +1,32 @@
+#pre-define credentials
+credentials = {
+    "username1": "Izwn12",
+    "password1": "@Fishmoll11",
+    "Name": "Iz Iz"
+}
+
+def login():
+    max_attempts = 3
+    attempts = 0
+    
+    while attempts < max_attempts:
+        print("Hello! Please log in.")
+        username = input("username: ")
+
+        if "username1" in credentials and credentials["username1"] == username:
+            print(f"Welcome, {credentials['Name']}! Please enter password.")
+            password = input("password: ")
+            if "password1" in credentials and credentials["password1"] == password:
+                print("Login successful!!!")
+                return
+            else:
+                print("INVALID P-WORD, pls try again.")
+        else: 
+            print("Invalid username, please try again.")
+    
+        attempts += 1 
+        print(f"Attempt {attempts} of {max_attempts}")
+    
+    print("Max login attempts reached. Pls try again later.")
+    
+login()
